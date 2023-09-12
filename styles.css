@@ -118,3 +118,32 @@ img{
     max-height: 200px; /* Altura máxima para las imágenes */
     overflow: hidden;
 }
+
+/* Estilos para el footer */
+.green-footer {
+    background-color: #2ecc71; /* Color de fondo verde suave */
+    text-align: center;
+    padding: 10px 0; /* Espaciado interior */
+    color: #ffffff; /* Color del texto en blanco */
+  }
+  
+  /* Estilos para el texto de derechos reservados */
+  .green-footer p {
+    margin: 0; /* Elimina el margen predeterminado */
+  }
+
+/* Botón "Ver más" */
+.btn-ver-mas {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5cb85c; /* Cambia este color al verde que prefieras */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-ver-mas:hover {
+    background-color: #4cae4c; /* Color de fondo al pasar el cursor sobre el botón */
+}  
