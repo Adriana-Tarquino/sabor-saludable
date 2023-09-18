@@ -1,11 +1,11 @@
 /* Estilos generales */
-@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
 body {
-    font-family: 'Signika', sans-serif;
+    font-family: 'Mooli', sans-serif;
     background-color: #ffffff;
     margin: 0;
     padding: 0;
+    font-size: 18px; /* Tamaño base de la fuente */
     
 }
 
@@ -17,133 +17,169 @@ body {
 
 /* Encabezado */
 header {
-    background-color: #D9EDDF;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
+  /*  background-color: #D9EDDF;*/
+    background-color: #eeeeee; /* Fondo gris claro para el encabezado */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1009%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(91%2c 233%2c 152%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c618.777C120.956%2c617.064%2c251.608%2c614.201%2c346.542%2c539.229C439.087%2c466.145%2c447.063%2c333.805%2c496.449%2c226.721C546.066%2c119.136%2c642.779%2c26.698%2c637.5%2c-91.659C632.091%2c-212.923%2c566.671%2c-334.7%2c468.239%2c-405.731C374.929%2c-473.065%2c243.13%2c-419.752%2c133.669%2c-455.233C19.307%2c-492.303%2c-64.446%2c-645.932%2c-180.919%2c-616.152C-296.262%2c-586.661%2c-319.653%2c-430.417%2c-375.212%2c-325.123C-418.797%2c-242.522%2c-449.406%2c-158.642%2c-470.351%2c-67.626C-493.168%2c31.528%2c-521.91%2c129.707%2c-502.878%2c229.657C-480.417%2c347.613%2c-447.873%2c475.653%2c-352.908%2c549.136C-256.118%2c624.031%2c-122.371%2c620.51%2c0%2c618.777' fill='%2319ba5e'%3e%3c/path%3e%3cpath d='M1440 1028.813C1526.349 1018.4780000000001 1565.389 915.623 1635.326 863.934 1699.0819999999999 816.812 1784.69 802.62 1832.058 739.047 1884.85 668.194 1921.5520000000001 579.962 1912.393 492.08 1903.113 403.034 1850.29 321.692 1782.47 263.248 1719.2269999999999 208.748 1632.345 200.99400000000003 1551.309 180.916 1473.899 161.736 1394.038 121.007 1319.159 148.454 1245.08 175.608 1205.426 254.137 1165.654 322.278 1131.574 380.66700000000003 1128.346 447.99 1106.907 512.108 1079.597 593.783 1000.615 667.393 1022.3969999999999 750.713 1043.97 833.2339999999999 1141.129 867.308 1212.122 914.585 1284.306 962.655 1353.89 1039.1190000000001 1440 1028.813' fill='%23bff6d7'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1009'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
-*/
-
+    padding: 10px 0;
 }
-.menu-left h1 {
-    color: #6F9B7A;
+
+.menu-left h2 {
+    /*color: #6F9B7A;*/
+    color: #333; /* Texto en gris oscuro */
     margin: 0;
+    font-size: 50px; /* Tamaño del título */
+    text-align: center;
 }
 
-.menu-left nav ul {
-    list-style: none;
-    display: flex;
-    margin-right: 30px;
+#inicio{
+    color: #02340e;
+    margin-left: 10px;
+    font-size: 20px; /* Tamaño del título */
+    text-align:right;
+    text-decoration: none; /* Elimina el subrayado del texto */
 }
-
-.menu-left nav ul li {
-    margin-right: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px; /* Tamaño del texto del menú */
-}
-
-.menu-left nav a {
-    text-decoration: none;
-    color: #6F9B7A;
-    font-weight: bold;
-}
-
-/* Barra de búsqueda */
-.menu-right .search-bar {
-    display: flex;
-    
-}
-
-.menu-right .search-bar input[type="text"] {
-    padding: 5px;
-    border: 1px solid #ccc;
-    margin-left: 160%; /* Esto alinea el botón a la derecha */
-}
-
-.menu-right .search-bar button {
-    padding: 5px 10px;
-    background-color: #6F9B7A;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    margin-left: 0%; /* Esto alinea el botón a la derecha */
-}
-
 
 /* Cuadros de comida */
 .food-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
 }
 
 .food-item {
-    background-color: #fff;
+   /* background-color: #F2FCF4;*/
+   background-color: #F5F5F5; /* Fondo gris claro para los cuadros de comida */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
     text-align: center;
+    padding: 10px;
+   /* border: 2px solid #2ecc71;*/
+    border: 2px solid #333; /* Fondo gris oscuro para el pie de página */
+    transition: transform 0.3s ease; /* Agregar transición suave */
 }
 
 .food-item img {
     max-width: 100%;
     height: auto;
-}
-
-.food-item h2 {
-    color: #2ecc71;
-    font-size: 24px;
-    margin-top: 10px;
-}
-.food-title {
-    color: #6F9B7A;
-    font-size: 60px; /* Aumento el tamaño del título */
-    margin-top: 10px;
-    text-align: center;
-}
-
-.food-item {
-    background-color:#F2FCF4;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 10px; /* Reduzco el padding para hacer los cuadros más pequeños */
-    border: 2px solid #2ecc71; /* Color verde para el borde */
-    
-}
-
-
-img{
-    max-height: 200px; /* Altura máxima para las imágenes */
+    max-height: 200px;
     overflow: hidden;
 }
 
-/* Estilos para el footer */
+.food-item h3 {
+    
+    font-size: 20px; /* Tamaño del título de la comida */
+    margin-top: 10px;
+}
+
+/* Estilos del pie de página */
 .green-footer {
-    background-color: #2ecc71; /* Color de fondo verde suave */
+    /*background-color: #2ecc71;
+    color: #ffffff;*/
+    background-color: #333; /* Fondo gris oscuro para el pie de página */
+    color: #FFFFFF; /* Texto en blanco para el pie de página */
     text-align: center;
-    padding: 10px 0; /* Espaciado interior */
-    color: #ffffff; /* Color del texto en blanco */
-  }
-  
-  /* Estilos para el texto de derechos reservados */
-  .green-footer p {
-    margin: 0; /* Elimina el margen predeterminado */
-  }
+    padding: 10px 0;
+}
+
+/* Estilos para el texto de derechos reservados */
+.green-footer p {
+    margin: 0;
+}
 
 /* Botón "Ver más" */
 .btn-ver-mas {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #5cb85c; /* Cambia este color al verde que prefieras */
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    background-color: transparent;
+    font-weight: semibold;
+    color: #444;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border: 2px solid #eee;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 1s ease;
+    box-shadow: .5em .5rem 1rem #ccc, -.5em -.5rem 1rem #fff;
+    text-decoration: none; /* Elimina el subrayado del texto */
 }
 
 .btn-ver-mas:hover {
-    background-color: #4cae4c; /* Color de fondo al pasar el cursor sobre el botón */
-}  
+    box-shadow: .5em .5rem 1rem #fff, -.5em -.5rem 1rem #ccc;
+}
+
+.btn-ver-mas:active {
+    box-shadow: inset .2rem .2rem 1rem #fff, inset -.2rem -.2rem 1rem #ccc;
+}
+
+
+
+.food-item:hover {
+    transform: scale(1.05); /* Cambiar el tamaño al pasar el cursor */
+}
+
+#modo-oscuro-btn {
+    background-color: transparent;
+    font-weight: semibold;
+    color: #444;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border: 2px solid #eee;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 1s ease;
+    box-shadow: .5em .5rem 1rem #ccc,
+      -.5em -.5rem 1rem #fff;
+    position: absolute; /* Establecer posición absoluta */
+    top: 20px; /* Ajustar la distancia desde la parte superior */
+    right: 20px; /* Ajustar la distancia desde la derecha */
+}
+
+#modo-oscuro-btn:hover {
+    box-shadow: .5em .5rem 1rem #fff, -.5em -.5rem 1rem #ccc;
+}
+
+#modo-oscuro-btn:active {
+    box-shadow: inset .2rem .2rem 1rem #fff, inset -.2rem -.2rem 1rem #ccc;
+}
+
+/* Estilos para el modo oscuro */
+body.modo-oscuro {
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+
+/* Estilos para los cuadros en modo oscuro */
+body.modo-oscuro .food-item {
+    background-color: #666666;
+    color: #FFFFFF;
+}
+
+body.modo-oscuro header {
+    background-color: #666666;
+    color: #FFFFFF;
+}
+body.modo-oscuro .btn-ver-mas{
+    color: #FFFFFF;
+}
+body.modo-oscuro #modo-oscuro-btn{
+    color: #FFFFFF;
+}
+body.modo-oscuro .menu-left h2{ 
+    color: #FFFFFF;
+}
+
+/* Estilos para el botón en pantallas medianas */
+@media (max-width: 768px) {
+    #modo-oscuro-btn {
+        font-size: 0.8rem; /* Reducir el tamaño de la fuente */
+        padding: 0.8rem 1rem; /* Reducir el espacio interno del botón */
+    }
+}
+
+/* Estilos para el botón en pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    #modo-oscuro-btn {
+        font-size: 0.7rem; /* Reducir aún más el tamaño de la fuente */
+        padding: 0.7rem 0.9rem; /* Reducir el espacio interno del botón */
+    }
+}
